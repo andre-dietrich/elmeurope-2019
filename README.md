@@ -348,76 +348,76 @@ else {
 
 ### Hello Brain
 
-<script>
-var vtkColorTransferFunction = vtk.Rendering.Core.vtkColorTransferFunction;
-var vtkFullScreenRenderWindow = vtk.Rendering.Misc.vtkFullScreenRenderWindow;
-var vtkHttpDataSetReader = vtk.IO.Core.vtkHttpDataSetReader;
-var vtkPiecewiseFunction = vtk.Common.DataModel.vtkPiecewiseFunction;
-var vtkVolume = vtk.Rendering.Core.vtkVolume;
-var vtkVolumeMapper = vtk.Rendering.Core.vtkVolumeMapper;
+    <script>
+    var vtkColorTransferFunction = vtk.Rendering.Core.vtkColorTransferFunction;
+    var vtkFullScreenRenderWindow = vtk.Rendering.Misc.vtkFullScreenRenderWindow;
+    var vtkHttpDataSetReader = vtk.IO.Core.vtkHttpDataSetReader;
+    var vtkPiecewiseFunction = vtk.Common.DataModel.vtkPiecewiseFunction;
+    var vtkVolume = vtk.Rendering.Core.vtkVolume;
+    var vtkVolumeMapper = vtk.Rendering.Core.vtkVolumeMapper;
 
-var view = document.getElementById("vtk_@0");
-view.innerHTML = "";
-var fullScreenRenderer = vtk.Rendering.Misc.vtkFullScreenRenderWindow.newInstance({
-    rootContainer: view,
-    containerStyle: {
-        height: '100%',
-        overflow: 'hidden'
-    },
-    background: [0, 0, 0]
-});
+    var view = document.getElementById("vtk_@0");
+    view.innerHTML = "";
+    var fullScreenRenderer = vtk.Rendering.Misc.vtkFullScreenRenderWindow.newInstance({
+        rootContainer: view,
+        containerStyle: {
+            height: '100%',
+            overflow: 'hidden'
+        },
+        background: [0, 0, 0]
+    });
 
-const renderer = fullScreenRenderer.getRenderer();
-const renderWindow = fullScreenRenderer.getRenderWindow();
+    const renderer = fullScreenRenderer.getRenderer();
+    const renderWindow = fullScreenRenderer.getRenderWindow();
 
-const reader = vtkHttpDataSetReader.newInstance();
+    const reader = vtkHttpDataSetReader.newInstance();
 
-const actor = vtkVolume.newInstance();
-const mapper = vtkVolumeMapper.newInstance();
-mapper.setSampleDistance(0.7);
-actor.setMapper(mapper);
+    const actor = vtkVolume.newInstance();
+    const mapper = vtkVolumeMapper.newInstance();
+    mapper.setSampleDistance(0.7);
+    actor.setMapper(mapper);
 
-const ctfun = vtkColorTransferFunction.newInstance();
-ctfun.addRGBPoint(200.0, 0.4, 0.2, 0.0);
-ctfun.addRGBPoint(2000.0, 1.0, 1.0, 1.0);
-const ofun = vtkPiecewiseFunction.newInstance();
-ofun.addPoint(200.0, 0.0);
-ofun.addPoint(1200.0, 0.5);
-ofun.addPoint(3000.0, 0.8);
-actor.getProperty().setRGBTransferFunction(0, ctfun);
-actor.getProperty().setScalarOpacity(0, ofun);
-actor.getProperty().setScalarOpacityUnitDistance(0, 4.5);
-actor.getProperty().setInterpolationTypeToLinear();
-actor.getProperty().setUseGradientOpacity(0, true);
-actor.getProperty().setGradientOpacityMinimumValue(0, 15);
-actor.getProperty().setGradientOpacityMinimumOpacity(0, 0.0);
-actor.getProperty().setGradientOpacityMaximumValue(0, 100);
-actor.getProperty().setGradientOpacityMaximumOpacity(0, 1.0);
-actor.getProperty().setShade(true);
-actor.getProperty().setAmbient(0.2);
-actor.getProperty().setDiffuse(0.7);
-actor.getProperty().setSpecular(0.3);
-actor.getProperty().setSpecularPower(8.0);
+    const ctfun = vtkColorTransferFunction.newInstance();
+    ctfun.addRGBPoint(200.0, 0.4, 0.2, 0.0);
+    ctfun.addRGBPoint(2000.0, 1.0, 1.0, 1.0);
+    const ofun = vtkPiecewiseFunction.newInstance();
+    ofun.addPoint(200.0, 0.0);
+    ofun.addPoint(1200.0, 0.5);
+    ofun.addPoint(3000.0, 0.8);
+    actor.getProperty().setRGBTransferFunction(0, ctfun);
+    actor.getProperty().setScalarOpacity(0, ofun);
+    actor.getProperty().setScalarOpacityUnitDistance(0, 4.5);
+    actor.getProperty().setInterpolationTypeToLinear();
+    actor.getProperty().setUseGradientOpacity(0, true);
+    actor.getProperty().setGradientOpacityMinimumValue(0, 15);
+    actor.getProperty().setGradientOpacityMinimumOpacity(0, 0.0);
+    actor.getProperty().setGradientOpacityMaximumValue(0, 100);
+    actor.getProperty().setGradientOpacityMaximumOpacity(0, 1.0);
+    actor.getProperty().setShade(true);
+    actor.getProperty().setAmbient(0.2);
+    actor.getProperty().setDiffuse(0.7);
+    actor.getProperty().setSpecular(0.3);
+    actor.getProperty().setSpecularPower(8.0);
 
-mapper.setInputConnection(reader.getOutputPort());
+    mapper.setInputConnection(reader.getOutputPort());
 
-reader
-  .setUrl(
-    'https://data.kitware.com/api/v1/file/58e665158d777f16d095fc2e/download',
-    { fullPath: true, compression: 'zip', loadData: true }
-  )
-  .then(() => {
-    renderer.addVolume(actor);
-    renderer.resetCamera();
-    renderer.getActiveCamera().zoom(1.5);
-    renderer.getActiveCamera().elevation(70);
-    renderer.updateLightsGeometryToFollowCamera();
-    renderWindow.render();
-  });
+    reader
+      .setUrl(
+        'https://data.kitware.com/api/v1/file/58e665158d777f16d095fc2e/download',
+        { fullPath: true, compression: 'zip', loadData: true }
+      )
+      .then(() => {
+        renderer.addVolume(actor);
+        renderer.resetCamera();
+        renderer.getActiveCamera().zoom(1.5);
+        renderer.getActiveCamera().elevation(70);
+        renderer.updateLightsGeometryToFollowCamera();
+        renderWindow.render();
+      });
 
-</script>
+    </script>
 
-<div id="vtk_@0" style="height: 500px"></div>
+    <div id="vtk_@0" style="height: 500px"></div>
 
 
 ## Messaging (Elm)
