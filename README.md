@@ -267,17 +267,17 @@ class="animated fadeIn"
 <!-- style="width: 80%" class="animated fadeIn" -->
 `````````
    Document: String                         Model
- +----------------------+                 +---------------------+
- | # main title         |                 | title: List String  |
- |                      |                 +---------------------+
- | ## sub-title         |                 | body: List Markdown |
- |                      |  (JiT compile)  +---------------------+
- | ``` python           | --------------> | code: Array Code    |
- | print("Hello World") |                 +---------------------+
- | ```                  |                 | quiz: Array Quiz    |
- |                      |                 +---------------------+
- | ...                  |                 | ...                 |
- +----------------------+                 +---------------------+
+ ╔══════════════════════╗                 +---------------------+
+ ║ # main title         ║                 | title: List String  |
+ ║                      ║                 +---------------------+
+ ║ ## sub-title         ║                 | body: List Markdown |
+ ║                      ║  (JiT compile)  +---------------------+
+ ║ ``` python           ║ --------------> | code: Array Code    |
+ ║ print("Hello World") ║                 +---------------------+
+ ║ ```                  ║                 | quiz: Array Quiz    |
+ ║                      ║                 +---------------------+
+ ║ ...                  ║                 | ...                 |
+ ╚══════════════════════╝                 +---------------------+
 `````````
                           {{1}}
 <!-- style="width: 80%;" class="animated fadeIn" -->
@@ -319,7 +319,7 @@ var s = "Hello World";
 alert(s);
 s + 22;
 ```
-<script>@input</script>
+
 
 ### Hello Project
 
