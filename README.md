@@ -35,6 +35,8 @@ import:   https://raw.githubusercontent.com/liaTemplates/vtk/master/README.md
 | Twitter | @an_dietrich                      |
 
 
+![qr-image](pics/qr.png)
+
 ## Learning Management Systems (LMS)
 
 <!-- class="animated fadeIn" -->
@@ -488,7 +490,7 @@ You can set up a default voice, change it per slide or per comment.
 {{2-4}} This block will appear afterwards and
 disappear at step number 4.
 
-I am here to the end of slide ...
+https://liascript.github.io/course/?https://raw.githubusercontent.com/andre-dietrich/elmeurope-2019/master/README.md#16
 
                   {{4}}
 $$
