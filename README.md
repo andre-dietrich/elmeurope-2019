@@ -11,9 +11,12 @@ narrator: US English Male
 
 comment:  Presentation on LiaScript at the elmeurope 2019 conference in Paris.
 
+@red:    <bf style= "color: red">@0</bf>
+
 link:     https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css
 
-import: https://raw.githubusercontent.com/liaTemplates/vtk/master/README.md
+import:   https://raw.githubusercontent.com/liaTemplates/vtk/master/README.md
+          https://raw.githubusercontent.com/liaTemplates/rextester/master/README.md
 
 -->
 
@@ -346,6 +349,18 @@ else {
   eval(`@input(0)`);
 </script>
 
+### Hello C
+
+``` c
+#include<stdio.h>
+
+int main(void) {
+  printf("Hello World\n");
+  return 0;
+}
+```
+@Rextester.C
+
 ### Hello Brain
 
     <script>
@@ -419,14 +434,12 @@ else {
 
     <div id="vtk_@0" style="height: 500px"></div>
 
-
 ## Messaging (Elm)
 
     {{0}}
 <!-- class="animated fadeIn" -->
 ``` elm
 type alias Event = { topic : String, section : Int , message : JE.Value }
-
 
 update : Msg -> Model -> ( Model, Cmd Msg, Maybe Event )
 ...
@@ -435,36 +448,56 @@ update : Msg -> Model -> ( Model, Cmd Msg, Maybe Event )
     {{1}}
 <!-- class="animated fadeIn" -->
 ``````````
-                               +----------+        ||
-  [MODULES]                    | Terminal |        ||  [MESSAGES]                    { ... }
- -----------                   +-----+----+        || -------------                   =====
-  Quiz                      Code     |             ||                                   |
- +---+---+---+-----        +---+---+-+-+-----      ||                                   v
- | 0 | 1 | 2 | ...         | 0 | 1 | 2 | ...       ||      { top: "term", sec: ., msg: ... }
- +-+-+-+-+-+-+-----        +-+-+-+-+-+-+-----      ||       ===============================
-   |___|___|_ _              |___|___|_ _ _        ||                                   |
-       |_ _ _ _ _ _______________|                 ||                                   |
-                  |                                ||                                   |
- +----------+   +-+-+---+---+-----                 ||                                   v
- | Settings |   | 0 | 1 | 2 | ...                  ||      { top: "code", sec: 2, msg: ... }
- +-----+----+   +---+-+-+---+-----                 ||       ===============================
-       |              |     Slides                 ||                                   |
- +-----+--------------+----+                       ||                                   v
- |         LiaScript       |                       ||     { top: "slide", sec: 1, msg: ... }
- +-------+-----------------+                       ||      ================================
-         |         ^                               ||
-         v  ports  |                               ||
+  [MODULES]                       ┏━━━━━━━━━━┓      ░  [MESSAGES]
+ -----------                      ┃ Terminal ┃      ░ ------------                   { ... }
+                                  ┗━━━━━┳━━━━┛      ░                                 =====
+                              ┏━━━━━━━━━┛           ░                                   |
+      ┌─┬─┬─┬───        ┌─┬─┲━┻━┱───                ░                                   v
+ Quiz │0│1│2│...   Code │0│1┃ 2 ┃...                ░      { top: "term", sec: ., msg: ... }
+      └┬┴┬┴┬┴───        └┬┴┬┺━┳━┹───                ░       ===============================
+       └ ┴ ┼ ─ ─ ─       └ ┴ ─┠ ─ ─ ─               ░                                   |
+           └ ─ ─ ─ ─ ─ ─ ─┲━━━┛                     ░                                   |
+ ┌──────────┐         ┌─┲━┻━┱─┬─────                ░                                   v
+ │ Settings │  Slides │0┃ 1 ┃2│ ...                 ░      { top: "code", sec: 2, msg: ... }
+ └─────┬────┘         └┬┺━┳━┹┬┴─────                ░       ===============================
+       │               └─ ╂ ─┴ ─ ─ ─                ░                                   |
+       │            ┏━━━━━┛                         ░                                   |
+ ┏━━━━━┷━━━━━━━━━━━━┻━━━━━━━┓                       ░                                   v
+ ┃         LiaScript        ┃                       ░     { top: "slide", sec: 1, msg: ... }
+ ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛                       ░
+         |         ^                                ░
+         v  ports  |                                ░
 ``````````
+
 
 ## Animations and Speech (LiaScript)
 
-link ...
+                --{{1}}--
+Braces within minuses indicate that this is some explanation for a certain point ...
 
+                  {{1}}
+| This   | table                                | will  |
+| :----- | :----------------------------------- | :---- |
+| appear | at {3}{__inline is also possible__ } | first |
+
+
+                --{{2 French Female}}--
+You can set up a default voice, change it per slide or per comment.
+
+
+{{2-4}} This block will appear afterwards and
+disappear at step number 4.
+
+I am here to the end of slide ...
+
+                  {{4}}
+$$
+   \sum_{i=1}^\infty\frac{1}{n^2}
+        =\frac{\pi^2}{6}
+$$
 
 
 ## Packaging (Elm/LiaScript)
-
-A course can be a resource ... functionality
 
 ``` markdown
 <!--
@@ -491,6 +524,9 @@ import:  https://some_raw_liascript_code
 @red(this is important)
 ```
 
+@red(List of Templates:) https://github.com/LiaTemplates
+
+
 ## Lifting a Project and Dependencies to Elm 0.19
 
 1. Remain on Elm 0.18
@@ -499,9 +535,5 @@ import:  https://some_raw_liascript_code
 4. Upgrade your libraries to Elm 0.19
 5. Upgrade your project
 
-### Regex-Random-Strings
-
 
 ## THX
-
-... Thx
