@@ -35,7 +35,16 @@ import:   https://raw.githubusercontent.com/liaTemplates/vtk/master/README.md
 | Twitter | @an_dietrich                      |
 
 
+                               {{1}}
+*******************************************************************************
+
+https://github.com/andre-dietrich/elmeurope-2019
+
 ![qr-image](pics/qr.png)
+
+https://liascript.github.io/course/?https://raw.githubusercontent.com/andre-dietrich/elmeurope-2019/master/README.md
+
+*******************************************************************************
 
 ## Learning Management Systems (LMS)
 
@@ -78,6 +87,34 @@ https://www.youtube.com/watch?v=8pTEmbeENF4
 ## Todo: Quizzes
 
 __How would you implement a quiz in Markdown?__
+
+
+[( )] This is wrong.
+[(X)] The only correct option.
+[( )] Still not right.
+
+
+
+[[ ]] Add as many elements as you want?
+[[X]] The X marks the correct answer!
+[[ ]] ... this is wrong ...
+[[X]] ... this has to be selected too ...
+[[X]] ... this has to be selected too ...
+[[?]] hint1
+[[?]] hint2
+
+[[liascript]]
+************************************
+
+blablabla
+
+
+$$
+   \sum_{i=1}^\infty\frac{1}{n^2}
+        =\frac{\pi^2}{6}
+$$
+
+************************************
 
 
 # Prehistory: SelectScript
@@ -294,8 +331,8 @@ class="animated fadeIn"
 
    Model: Array Slides
  +--------------------+--------------------+--------------------
- | title: main title  | title: sub-title   | title: ...         
- | code:  String      | code:  String      | ...                
+ | title: main title  | title: sub-title   | title: ...
+ | code:  String      | code:  String      | ...
  +--------------------+--------------------+--------------------
 `````````
                           {{2}}
@@ -324,6 +361,7 @@ var s = "Hello World";
 alert(s);
 s + 22;
 ```
+<script>@input</script>
 
 
 ### Hello Project
@@ -365,7 +403,9 @@ int main(void) {
 
 ### Hello Brain
 
-    <script>
+> This might take a while until the patient data is loaded.
+
+<script>
     var vtkColorTransferFunction = vtk.Rendering.Core.vtkColorTransferFunction;
     var vtkFullScreenRenderWindow = vtk.Rendering.Misc.vtkFullScreenRenderWindow;
     var vtkHttpDataSetReader = vtk.IO.Core.vtkHttpDataSetReader;
@@ -432,9 +472,9 @@ int main(void) {
         renderWindow.render();
       });
 
-    </script>
+</script>
 
-    <div id="vtk_@0" style="height: 500px"></div>
+<div id="vtk_@0" style="height: 500px"></div>
 
 ## Messaging (Elm)
 
@@ -533,9 +573,11 @@ import:  https://some_raw_liascript_code
 
 1. Remain on Elm 0.18
 2. Update your project first
-3. Update the library
+3. Update the libraries
 4. Upgrade your libraries to Elm 0.19
 5. Upgrade your project
 
 
 ## THX
+
+http://github.com/LiaBooks
