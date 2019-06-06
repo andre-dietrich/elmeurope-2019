@@ -80,9 +80,7 @@ __Task:__ Adding quizzes
 
 __Bret Victor The Future of Programming:__
 
-https://www.youtube.com/watch?v=8pTEmbeENF4
-
-<!-- width="600" height="400" -->
+!?[nice vide](https://www.youtube.com/watch?v=8pTEmbeENF4)<!-- width="600" height="400" -->
 
 ## Todo: Quizzes
 
