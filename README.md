@@ -7,7 +7,7 @@ version:  0.0.1
 
 language: en
 
-narrator: US English Male
+narrator: US English Female
 
 comment:  Presentation on LiaScript at the elmeurope 2019 conference in Paris.
 
@@ -58,6 +58,7 @@ easy to read and write syntax.
                               --{{2}}--
 You can use for example the double braces notation as bullet-points, to indicate
 when something should appear or disappear.
+
 
 
     {{2-3}}
