@@ -437,11 +437,20 @@ update : Msg -> Model -> ( Model, Cmd Msg, Maybe Event )
 
 ## Lifting a Project and Dependencies to Elm 0.19
 
-1. ** Remain on Elm 0.18!!! **
-2. Update your project first --> webcomponents, ports, operators, lazy, etc.
-3. Update the libraries --> operators, lazy, etc.
-4. Upgrade your libraries to Elm 0.19
-5. Upgrade your project to Elm 0.19
+<!-- class="animated fadeIn"-->
+{{1}} ** Remain on Elm 0.18!!! **
+
+<!-- class="animated fadeIn"-->
+{{2}} Update your project first --> webcomponents, ports, operators, lazy, etc.
+
+<!-- class="animated fadeIn"-->
+{{3}} Update the libraries --> operators, lazy, etc.
+
+<!-- class="animated fadeIn"-->
+{{4}} Upgrade your libraries to Elm 0.19
+
+<!-- class="animated fadeIn"-->
+{{5}} Upgrade your project to Elm 0.19
 
 
 ## What's Next?
