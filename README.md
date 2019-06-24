@@ -455,10 +455,32 @@ update : Msg -> Model -> ( Model, Cmd Msg, Maybe Event )
 
 ## What's Next?
 
+                         {{0-1}}
+> _Infographic: Textbook Costs Skyrocket 812% in 35 Years_
+>
+> [[www.aeseducation.com](https://www.aeseducation.com/blog/infographic-the-skyrocketing-cost-of-textbooks-for-schools-students)]
+>
+> _The cost of getting a (decent) education in India is skyrocketing_
+>
+> [[qz.com](https://qz.com/india/445500/the-cost-of-getting-a-decent-education-in-india-is-now-staggering/)]
+>
+> _College Textbook Prices Increasing Faster Than Tuition And Inflation_
+>
+> [[huffpost.com](https://www.huffpost.com/entry/college-textbook-prices-increase_n_2409153)]
+
+
+                               {{1}}
+*********************************************************************
+
 __Atom:__
 
 * liascript-preview: https://atom.io/packages/liascript-preview
 * liascript_snippets: https://atom.io/packages/liascript-snippets
+
+*********************************************************************
+
+                               {{2}}
+*********************************************************************
 
 __Projects:__
 
@@ -466,3 +488,5 @@ __Projects:__
 * http://github.com/LiaBooks
 * Free schoolbooks?
 * Interactive Elm-tutorials & documentation
+
+*********************************************************************
