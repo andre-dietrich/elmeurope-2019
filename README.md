@@ -50,14 +50,17 @@ https://liascript.github.io/course/?https://raw.githubusercontent.com/andre-diet
 
 https://liascript.github.io/course/?https://raw.githubusercontent.com/andre-dietrich/elmeurope-2019/master/README.md#2
 
-                              --{{1}}--
-Hi there. LiaScript is not intended to be the next Markup language. It is more
-or less a tool for creating interactive screencast-like online courses. With an
-easy to read and write syntax.
+                --{{1}}--
+Hi there. LiaScript is not intended to be
+the next Markup language. It is more or less
+a tool for creating interactive
+screencast-like online courses. With an easy
+to read and write syntax.
 
-                              --{{2}}--
-You can use for example the double braces notation as bullet-points, to indicate
-when something should appear or disappear.
+                --{{2}}--
+You can use for example the double braces
+notation as bullet-points, to indicate when
+something should appear or disappear.
 
 
 
@@ -76,20 +79,21 @@ when something should appear or disappear.
         0              x-axis               1
 
 
-                              --{{3}}--
-You can apply this technique on any kind of Markdown block, but inlining is also
-possible.
+                  --{{3}}--
+You can apply this technique on any kind of
+Markdown block, but inlining is also possible.
 
 
-                                {{3}}
-| This   | table                                        | will  |
-| :----- | :------------------------------------------- | :---- |
-| appear | at the {4}{$\sum_{i=1}^\infty\frac{1}{n^2}$} | end   |
+                    {{3}}
+| This   | table                    | will  |
+| :----- | :----------------------- | :---- |
+| appear | at the {4}{__watch me__} | end   |
 
 
-                       --{{5 French Female}}--
-And by using double dashes, you can mark a paragraph as a comment that should be
-read out loud.
+           --{{5 French Female}}--
+And by using double dashes, you can mark a
+paragraph as a comment that should be read
+out loud.
 
 ## Prehistory
 
@@ -229,14 +233,14 @@ class="animated fadeIn"
 
 ## LiaScript vs. LMS
 
-> Dietrich, A. & Zug, S. (2019).
+    {{0-1}}
 > _From Hero to Zero with Learning Management Systems._
-> [DeLFI & GMW](http://www.delfi2019.de/)
-> (an eLearning conference in Berlin)
+>
+> https://osf.io/3rweg/
 
+{{1}} **Multimedia**
 
-### __Task:__ Integrating Multimedia Content
-
+                           {{1}}
 | System | time-on-task | # of clicks | # of pages | satisfaction |
 |--------|-------------:|------------:|-----------:|-------------:|
 | Canvas |        02:56 |        10.4 |        5.1 |         0.83 |
@@ -245,14 +249,9 @@ class="animated fadeIn"
 | Moodle |        03:51 |        13.9 |        7.3 |         0.27 |
 
 
-__Bret Victor The Future of Programming:__
-https://www.youtube.com/watch?v=8pTEmbeENF4
+{{2}} **Quizzes**
 
-<!-- width="600" height="400" -->
-
-
-### __Task:__ Adding Quizzes
-
+                           {{2}}
 | System | time-on-task | # of clicks | # of pages | satisfaction |
 |--------|-------------:|------------:|-----------:|-------------:|
 | Canvas |        08:34 |        51.2 |       15.6 |         0.38 |
@@ -260,6 +259,17 @@ https://www.youtube.com/watch?v=8pTEmbeENF4
 | ILIAS  |        04:04 |        19.3 |        7.7 |         0.10 |
 | Moodle |        08:33 |        47.5 |        9.9 |        -0.92 |
 
+
+
+### __Task:__ Integrating Multimedia Content
+
+https://www.youtube.com/watch?v=8pTEmbeENF4
+
+<!--
+width="600" height="400"
+-->
+
+### __Task:__ Adding Quizzes
 
 
 ## Lazy Parsing & Refactoring
@@ -318,6 +328,9 @@ var s = "Hello World";
 alert(s);
 s + 22;
 ```
+<script>
+@input
+</script>
 
 
 ### Projects
@@ -398,7 +411,46 @@ int main(void) {
 @VTK.load(https://data.kitware.com/api/v1/file/58e665158d777f16d095fc2e/download)
 
 
-## Messaging (Elm)
+## What's Next?
+
+
+                         {{0-1}}
+> _Infographic: Textbook Costs Skyrocket 812% in 35 Years_
+>
+> [[www.aeseducation.com](https://www.aeseducation.com/blog/infographic-the-skyrocketing-cost-of-textbooks-for-schools-students)]
+>
+> _The cost of getting a (decent) education in India is skyrocketing_
+>
+> [[qz.com](https://qz.com/india/445500/the-cost-of-getting-a-decent-education-in-india-is-now-staggering/)]
+>
+> _College Textbook Prices Increasing Faster Than Tuition And Inflation_
+>
+> [[huffpost.com](https://www.huffpost.com/entry/college-textbook-prices-increase_n_2409153)]
+
+
+                               {{1}}
+*********************************************************************
+
+__Atom:__
+
+* liascript-preview: https://atom.io/packages/liascript-preview
+* liascript-snippets: https://atom.io/packages/liascript-snippets
+
+*********************************************************************
+
+                               {{2}}
+*********************************************************************
+
+__Projects:__
+
+* http://github.com/LiaTemplates
+* http://github.com/LiaBooks
+
+*********************************************************************
+
+## Misc
+
+### Messaging (Elm)
 
     {{0}}
 <!-- class="animated fadeIn" -->
@@ -435,7 +487,7 @@ update : Msg -> Model -> ( Model, Cmd Msg, Maybe Event )
 
 
 
-## Lifting a Project and Dependencies to Elm 0.19
+### Lifting a Project and Dependencies to Elm 0.19
 
 <!-- class="animated fadeIn"-->
 {{1}} ** Remain on Elm 0.18!!! **
@@ -451,42 +503,3 @@ update : Msg -> Model -> ( Model, Cmd Msg, Maybe Event )
 
 <!-- class="animated fadeIn"-->
 {{5}} Upgrade your project to Elm 0.19
-
-
-## What's Next?
-
-                         {{0-1}}
-> _Infographic: Textbook Costs Skyrocket 812% in 35 Years_
->
-> [[www.aeseducation.com](https://www.aeseducation.com/blog/infographic-the-skyrocketing-cost-of-textbooks-for-schools-students)]
->
-> _The cost of getting a (decent) education in India is skyrocketing_
->
-> [[qz.com](https://qz.com/india/445500/the-cost-of-getting-a-decent-education-in-india-is-now-staggering/)]
->
-> _College Textbook Prices Increasing Faster Than Tuition And Inflation_
->
-> [[huffpost.com](https://www.huffpost.com/entry/college-textbook-prices-increase_n_2409153)]
-
-
-                               {{1}}
-*********************************************************************
-
-__Atom:__
-
-* liascript-preview: https://atom.io/packages/liascript-preview
-* liascript_snippets: https://atom.io/packages/liascript-snippets
-
-*********************************************************************
-
-                               {{2}}
-*********************************************************************
-
-__Projects:__
-
-* http://github.com/LiaTemplates
-* http://github.com/LiaBooks
-* Free schoolbooks?
-* Interactive Elm-tutorials & documentation
-
-*********************************************************************
