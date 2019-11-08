@@ -409,20 +409,41 @@ a simple extension to Markdown.
 
 ### __Task:__ Integrating Multimedia Content
 
-```
+      --{{0}}--
+If you know Markdown, then the first three types of links should be familiar to
+you. A simple link, you can give it a name, if you put it into parentheses and
+add some content in brackets at the beginning. And if you want to define an
+image, you have to mark it with an exclamation mark in front of it. But that is
+where Markdown ends.
+
+``` md
 https://www.youtube.com/watch?v=8pTEmbeENF4
 
-[a link](https://www.youtube.com/watch?v=8pTEmbeENF4)
+ [a link](https://www.youtube.com/watch?v=8pTEmbeENF4)
 
-![an image](https://www.youtube.com/watch?v=8pTEmbeENF4)
+ ![image](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/VisualEditor_-_Icon_-_Book.svg/240px-VisualEditor_-_Icon_-_Book.svg.png)
 
-?[a link](https://www.youtube.com/watch?v=8pTEmbeENF4)
+ ?[sound](https://soundcloud.com/roddyricch/start-wit-me-feat-gunna)
+
+!?[video](https://www.youtube.com/watch?v=8pTEmbeENF4)
 
 ```
 
+      --{{1}}--
+In LiaScript you can add a question mark in front of it, to indicate a sound
+file. With a bit of imagination this might resemble and ear. But next to
+ordinary files, this works for example also for soundcloud.
 
+        {{1}}
+?[sound](https://soundcloud.com/roddyricch/start-wit-me-feat-gunna)
 
-!?[nice video](https://www.youtube.com/watch?v=8pTEmbeENF4)<!--
+      --{{2}}--
+And if you have an image with sound, then this can be interpreted as a video.
+And the best thing about this is, if you are reading this document with a
+Markdown reader of your choice, than these links are still valid Markdown links.
+
+        {{2}}
+!?[video](https://www.youtube.com/watch?v=8pTEmbeENF4)<!--
 width="600" height="400"
 -->
 
