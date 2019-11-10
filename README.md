@@ -68,7 +68,7 @@ section.
 
 ## What is LiaScript
 <!--
-narrator: US English Male
+narrator: US English Female
 -->
 
       --{{0}}--
