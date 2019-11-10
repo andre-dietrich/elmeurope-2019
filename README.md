@@ -13,14 +13,10 @@ comment:  Presentation on LiaScript at the elmeurope 2019 conference in Paris.
 
 @red:     <bf style= "color: red">@0</bf>
 
-link:     https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css
-
 import:   https://raw.githubusercontent.com/liaTemplates/vtk/master/README.md
           https://raw.githubusercontent.com/liaTemplates/rextester/master/README.md
 
 -->
-
-
 
 # Open-courSe development with LiaScript
 
@@ -36,12 +32,14 @@ import:   https://raw.githubusercontent.com/liaTemplates/vtk/master/README.md
 
 
       --{{0}}--
-Hi there and welcome to my talk about LiaScript, a Open-courSe authoring tool
+Hi there and welcome to my talk about LiaScript, an Open-courSe authoring tool
 for open educational content, which is based on a some simple Markdown
 extension. When I started this project, I shortly realized that there is a huge
 gap between people that want to create educational content and those who can. It
 takes years to become a sophisticated web-developer, but it also takes years to
-become fluent in veterinary opthalmology, cuniform writing or slavic literature.
+become fluent in veterinary ophthalmology, cuneiform writing or Slavic
+literature. But if it comes to creating and sharing open educational content,
+those people are mostly stuck at Word, PDFs, PowerPoint.
 
 
       --{{1}}--
@@ -113,7 +111,7 @@ something should appear or disappear.
 ```
 
 
-    {{2-3}}
+       {{2-3}}
               Example of an ASCII-Art diagram
     1.9 |
         |                 ***
@@ -171,7 +169,7 @@ web-developer.
 ![robots in a manucactoring hall](pics/robots.png)<!--width="100%"-->
 
       --{{0}}--
-Originally I was a robotics and embedded systems developer, who become obseesed
+Originally I was a robotics and embedded systems developer, who become obsessed
 with programming paradigms and how people try to solve problems or think
 differently in different  languages. I even tried to develop my own programming
 language that contained everything I liked in other programming languages or
@@ -198,10 +196,10 @@ in the robotics community.
 ### Industrial eLab Project (BMBF)
 
       --{{0}}--
-So when I thought my university carrear was over, a friend of mine approached to
-to me and asked me, if I would like to join a project, called "Industrial eLab".
-It was about teaching student embedded systems programming remotely on real
-Arduino robots remotely. And I was like, PHP - so we meet again old friend.
+So when I thought my university carrier was over, a friend of mine approached to
+me and asked me if I would like to join a project, called “Industrial eLab”. It
+was about teaching student embedded systems programming remotely on real Arduino
+robots remotely. And I was like, PHP — so we meet again old friend.
 
        {{0-1}}
 ![php logo](pics/php.svg)<!--
@@ -211,8 +209,8 @@ style="width: 70%;
        margin-right: auto;" -->
 
       --{{1}}--
-But then after some research, I stumbled accross this great projects elixir and
-phoenix, which is increadible. Event with only little web-development experience
+But then after some research, I stumbled across this great projects elixir and
+phoenix, which is incredible. Event with only little web-development experience
 I could develop a system with user Management, an online editor and remote
 compiler for Arduino.
 
@@ -224,10 +222,10 @@ style="width: 70%;
        margin-right: auto;" -->
 
       --{{2}}--
-But, every time that I tried to experiment a little bit with the system or
-integrate a new feature, the system crashed. And mostly not because of Elixir,
-but because of JavaScript. The more the system grew, the more intemedading it
-was to update something.
+But, every time that I tried to experiment a little with the system or integrate
+a new feature, the system crashed. And mostly not because of Elixir, but because
+of JavaScript. The more the system grew, the more intimidating it was to update
+something.
 
         {{2}}
 ![editing](pics/editing.gif)<!--
@@ -237,16 +235,16 @@ style="width: 70%;
        margin-right: auto;" -->
 
       --{{3}}--
-And so I did a little research and stumbled accross this language called elm.
-Looks like Haskell, no runtime exceptions, staticaly typed, etc., that was not
-so interesting as the model-view-controller approach, with only one global
-state. This was genius and so I thought lets give it a try. After rebuilding the
-UI with elm I realized that the system that I had developed so far, could also
-be used to teach programming, operating system, iot and other stuff, but how
-would I develop such content and deliver it to students, via pdfs, word, or
-develop a website for every aspect? So the next idea that came into my mind, why
-not using something like Markdown for creating online courses, but this time I
-will add everything that I miss in Markdown to make it more interactive.
+So I did a little research and stumbled across this language called elm. Looks
+like Haskell, no runtime exceptions, statically typed, etc., that was not so
+interesting as the model-view-controller approach, with only one global state.
+This was genius, and so I thought lets give it a try. After rebuilding the UI
+with elm I realized that the system that I had developed so far, could also be
+used to teach programming, operating system, algorithms, IOT and other stuff,
+but how would I develop such content and deliver it to students, via PDFs, Word,
+or develop a website for every aspect? So the next idea that came into my mind,
+why not using something like Markdown for creating online courses, but this time
+I will add everything that I miss in Markdown to make it more interactive.
 
 ## Let's build a Markdown-interpreter with Elm
 
@@ -261,7 +259,7 @@ back.
 {{1}} Search for Parser libraries in Elm: ___Parser-Combinators???___
 
       --{{1}}--
-Ok, wo here must be some parser libraries, that I can use. Well, it seems there
+Ok, so here must be some parser libraries, that I can use. Well, it seems there
 are, but what the heck is a parser combinator?
 
 
@@ -281,20 +279,18 @@ sufficient to use regular expression and some basic rules, right?
 {{4}} Go back to: __step 1__
 
       --{{4}}--
-After few hours I was wondering, what was this parser combinator thing again.
+After few hours later I was wondering, what was this parser combinator thing
+again.
 
 
 ### Modularization (Elm)
 
       --{{0}}--
-Developing parser the functional style is actually perfect and fits into the
-common elm architecture process. In most cases you start with an initial app.
+Developing a parser the functional style actually fits into the common elm
+developing process perfectly. In most cases you start with an initial app.
 
        {{0-1}}
-<!--
-style="width:  calc(100vh);"
-class="animated fadeIn"
--->
+<!-- style="width: calc(100vh);" -->
 `````````
 .
 ├── App.elm
@@ -303,16 +299,13 @@ class="animated fadeIn"
 `````````
 
       --{{1}}--
-And the more your application grows, the more you start to separate parts into a
-model, view, update, and some helper functions, but the same can be done for the
-parser too.
+And the more your application grows, the more you start to separate parts into
+modules with a model, view, update, and some helper functions, but the same can
+be done for the parser too.
 
 
        {{1-2}}
-<!--
-style="width:  calc(100vh * 0.8);"
-class="animated fadeIn"
--->
+<!-- style="width: calc(100vh * 0.8)" -->
 `````````
 .
 ├── App.elm
@@ -327,13 +320,10 @@ class="animated fadeIn"
       --{{2}}--
 At the end, a parser is also a composition of many parsers, such as your view
 is. And every parser is only responsible for a very tiny part, such as the quiz
-and survery parser only have to perform one single task.
+and survey parser only have to perform one single task.
 
         {{2}}
-<!--
-style="width:  calc(100vh * 0.5);"
-class="animated fadeIn"
--->
+<!-- style="width: calc(100vh * 0.5)" -->
 `````````
 .
 ├── App.elm
@@ -376,11 +366,11 @@ The data and links can be found at the following link.
 {{1}} **Multimedia**
 
       --{{1}}--
-On average it takes 3 minutes to integrate something like video with too many
-clicks an page changes. In most cases users also had to deal with the embed code
-and thus leave their standard editor and switch to coding.
+On average, it takes 3 minutes to integrate something like video with too many
+clicks and page changes. In most cases users also had to deal with the embed
+code and thus leave their standard editor and switch to coding.
 
-                           {{1}}
+        {{1}}
 | System | time-on-task | # of clicks | # of pages | satisfaction |
 |--------|-------------:|------------:|-----------:|-------------:|
 | Canvas |        02:56 |        10.4 |        5.1 |         0.83 |
@@ -392,10 +382,10 @@ and thus leave their standard editor and switch to coding.
 {{2}} **Quizzes**
 
       --{{2}}--
-Quizzes are even more complicated, even for the instructors, one women even said
-"what the f" during a recording, since her settings got lost a couple of times.
+Quizzes are even more complicated, even for the instructors, one woman even said
+“what the f” during a recording, since her settings got lost a couple of times.
 
-                           {{2}}
+        {{2}}
 | System | time-on-task | # of clicks | # of pages | satisfaction |
 |--------|-------------:|------------:|-----------:|-------------:|
 | Canvas |        08:34 |        51.2 |       15.6 |         0.38 |
@@ -432,7 +422,7 @@ https://www.youtube.com/watch?v=8pTEmbeENF4
       --{{1}}--
 In LiaScript you can add a question mark in front of it, to indicate a sound
 file. With a bit of imagination this might resemble and ear. But next to
-ordinary files, this works for example also for soundcloud.
+ordinary files, this works for example also for SoundCloud.
 
         {{1}}
 ?[sound](https://soundcloud.com/roddyricch/start-wit-me-feat-gunna)
@@ -477,13 +467,9 @@ $$
 
 ## Lazy Parsing & Refactoring
 
-    {{0}}
-<!-- style="width: 80%" class="animated fadeIn" -->
+        {{0}}
+<!-- style="width: 80%" -->
 `````````
-   _____
-  /     \
-
-
    Document: String                         Model
  ╔══════════════════════╗                 +---------------------+
  ║ # main title         ║                 | title: List String  |
@@ -497,8 +483,8 @@ $$
  ║ ...                  ║                 | ...                 |
  ╚══════════════════════╝                 +---------------------+
 `````````
-                          {{1}}
-<!-- style="width: 80%;" class="animated fadeIn" -->
+        {{1}}
+<!-- style="width: 80%;" -->
 `````````
            |
     (Preprocessing)
@@ -511,8 +497,8 @@ $$
  | code:  String      | code:  String      | ...
  +--------------------+--------------------+--------------------
 `````````
-                          {{2}}
-<!-- style="width: 80%;" class="animated fadeIn" -->
+        {{2}}
+<!-- style="width: 80%" -->
 `````````
            |                                          |
      (JiT compile)                              (JiT compile)
@@ -580,8 +566,6 @@ author: ...
 </script>
 @end
 
-link:     https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css
-
 import:   https://raw.githubusercontent.com/liaTemplates/vtk/master/README.md
           https://raw.githubusercontent.com/liaTemplates/rextester/master/README.md
 
@@ -596,7 +580,7 @@ attribute: _Say thank you_
 ```
 
 
-    {{1}}
+        {{1}}
 ``` c Rextester.c
 #include<stdio.h>
 
@@ -620,7 +604,7 @@ int main(void) {
 ## What's Next?
 
 
-                         {{0-1}}
+       {{0-1}}
 > _Infographic: Textbook Costs Skyrocket 812% in 35 Years_
 >
 > [[www.aeseducation.com](https://www.aeseducation.com/blog/infographic-the-skyrocketing-cost-of-textbooks-for-schools-students)]
@@ -634,7 +618,7 @@ int main(void) {
 > [[huffpost.com](https://www.huffpost.com/entry/college-textbook-prices-increase_n_2409153)]
 
 
-                               {{1}}
+        {{1}}
 *********************************************************************
 
 __Atom:__
@@ -644,7 +628,7 @@ __Atom:__
 
 *********************************************************************
 
-                               {{2}}
+        {{2}}
 *********************************************************************
 
 __Projects:__
@@ -658,8 +642,7 @@ __Projects:__
 
 ### Messaging (Elm)
 
-    {{0}}
-<!-- class="animated fadeIn" -->
+        {{0}}
 ``` elm
 type alias Event = { topic : String, section : Int , message : JE.Value }
 
@@ -667,8 +650,7 @@ update : Msg -> Model -> ( Model, Cmd Msg, Maybe Event )
 ...
 ```
 
-    {{1}}
-<!-- class="animated fadeIn" -->
+        {{1}}
 ``````````
   [MODULES]                       ┏━━━━━━━━━━┓      ░  [MESSAGES]
  -----------                      ┃ Terminal ┃      ░ ------------                   { ... }
@@ -695,17 +677,12 @@ update : Msg -> Model -> ( Model, Cmd Msg, Maybe Event )
 
 ### Lifting a Project and Dependencies to Elm 0.19
 
-<!-- class="animated fadeIn"-->
 {{1}} ** Remain on Elm 0.18!!! **
 
-<!-- class="animated fadeIn"-->
 {{2}} Update your project first --> webcomponents, ports, operators, lazy, etc.
 
-<!-- class="animated fadeIn"-->
 {{3}} Update the libraries --> operators, lazy, etc.
 
-<!-- class="animated fadeIn"-->
 {{4}} Upgrade your libraries to Elm 0.19
 
-<!-- class="animated fadeIn"-->
 {{5}} Upgrade your project to Elm 0.19
