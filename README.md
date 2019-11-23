@@ -9,7 +9,10 @@ language: en
 
 narrator: US English Male
 
-comment:  Presentation on LiaScript at the elmeurope 2019 conference in Paris.
+logo:     https://tulula.sfo2.cdn.digitaloceanspaces.com/dev/images/e04ddff04767b4041fdda21a7bc463846cffa569f659cc347fa400b466f4cd83.jpeg
+
+comment:  Presentation on LiaScript at the [elmeurope 2019](https://2019.elmeurope.org)
+          conference in Paris.
 
 @red:     <bf style= "color: red">@0</bf>
 
